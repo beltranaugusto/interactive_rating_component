@@ -11,29 +11,50 @@
   <title>Frontend Mentor | Interactive rating component</title>
 
 </head>
-<body>
+<body class="flex-center">
 
-  <div class="rating-component">
+  <div id="step-one" class="rating-component">
     <div class="row first">
-      <div class="icon">
-        <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z" fill="#FC7614"/></svg>
+      <div class="circle-bg flex-center">
+        <img src="images/icon-star.svg"> 
       </div>
     </div>
     <div class="row second">
-      <h1>How did we do?</h1>
+      <h2>How did we do?</h2>
       <p>
         Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
       </p>
     </div>
-    <div class="row third">3</div>
-    <div class="row fourth">4</div>
+    <div class="row third">
+      <button onclick=ratingButton(1) class="circle-bg flex-center">1</button>
+      <button onclick=ratingButton(2) class="circle-bg flex-center">2</button>
+      <button onclick=ratingButton(3) class="circle-bg flex-center">3</button>
+      <button onclick=ratingButton(4) class="circle-bg flex-center">4</button>
+      <button onclick=ratingButton(5) class="circle-bg flex-center">5</button>
+    </div>
+    <div class="row fourth flex-center last-row">
+      <button onclick=submit()>SUBMIT</button>
+    </div>
     </div>
   </div>
 
-  <div class="rating-component">
-
+  <div id="step-two" class="rating-component flex-center hide">
+    <div class="row">
+      <img src="images/illustration-thank-you.svg">
+    </div>
+    <div class="row rating">
+      <p id="rating-text">You selected 0 out of 5</p>
+    </div>
+    <div class="row text-center last-row">
+      <h2>Thank you!</h2>
+      <p>
+        We appreciate you taking the time to give a rating.
+        If you ever need more support, don't hesistate to get
+        in touch!
+      </p>
+    </div>
   </div>
 
-
+  <script src="app.js"></script>
 </body>
 </html>
